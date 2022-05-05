@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>untuk Liza</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+
+            <h2 id="call">hei!<br>you're beautiful &#x1F631;</h2>
+            <img id="first" src="https://c.tenor.com/Ez5abQcBMJIAAAAC/loveyou-kiss.gif" width="300px">
+            <img id="two" src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif">
+            <!-- <img src="https://c.tenor.com/E8K-oIs7yosAAAAC/milk-and-mocha-i-love-you.gif"> -->
+            <br>
+            <h2 id="ask">do you wanna be my girlfriend?</h2>
+            <h2 id="thx">I LOVE YOU &#10084;</h2>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-dark" id="mau">Yes</button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="Second group">
+                <button type="button" class="btn btn-outline-danger" id="gamau" onclick="gamau(this)">Nope</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            off();
+            function off() {
+                $("#first").show();
+                $("#two").hide();
+                $("#thx").hide();
+            }
+            $("#mau").click(function () {
+                $("#first").hide();
+                $("#two").show();
+                $("#mau").hide();
+                $("#gamau").hide();
+                $("#call").hide();
+                $("#ask").hide();
+                $("#thx").show();
+                alert("horeeeeeeee!!!");
+            });
+        });
+        function gamau(id) {
+            // alert(id);
+            var mau = document.getElementById("mau");
+            var i = Math.floor(Math.random() * 100) + 1;
+            var j = Math.floor(Math.random() * 100) + mau.offsetTop;
+            id.style.top = j + 'px';
+            id.style.left = i + 'px';
+        }
+    </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
